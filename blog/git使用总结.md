@@ -46,4 +46,33 @@ Host company.com
 这就是在这个命令中可能会使用到的一些情况。
 
 
-helloworld
+## git 常用的几个命令
+
+#### 说明
+
+```bash
+# 不加 --staged 表示可以显示当前正在修改的文件与上一版本的文件的区别
+# 加 --staged 表示可以比较已经staged了的文件与上一版本文件的区别
+$ git diff [--staged]
+
+#   这个命令是用来unstaged文件的，一般情况下，git add [file] 以后，
+#文件的状态就变成 staged，如果不想加入这个文件到本地仓库，可以使用这个命令
+$ git reset [file]
+
+# 这个命令比较复杂，主要是用来重置整个提交的commit的（没错就是每次提交的唯一标识）
+# --hard HEAD 比较常用，意思是将当前做出的所有的修改消除掉，重置索引和当前工作的分支
+# --mixed     默认的选项，意思是重置当前的索引，但是并不重置当前的工作分支，简单来说就是不tracked文件
+$ git reset [mode] [commit] 
+
+
+# 这个命令最常用
+$ git commit -m [message]
+
+# 列出当前所有的分支
+# 创建一个新的分支
+# 删除一个分支
+$ git branch [-l|--list]
+$ git branch [branch-name]
+$ git branch [-d|--delete]
+
+```
