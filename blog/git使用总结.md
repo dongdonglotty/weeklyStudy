@@ -75,4 +75,24 @@ $ git branch [-l|--list]
 $ git branch [branch-name]
 $ git branch [-d|--delete]
 
+
+# git stash 这个命令也经常被用到，场景是当你在b分支上开发，但是这个时候，你要使用a分支的内容，而且又不想commit b分支上已经改动的内容，这个时候使用这个命令就可以保存现场，然后b分支上的版本就变成最近commit的那一版了
+$ git stash
+
+# 列出当前所有的stash项目
+$ git stash list
+
+# 恢复最新保存的一个现场
+$ git stash pop
+
+# 删除掉最新的保存的一个现场
+$ git stash drop
+
+
+# git pull 这个命令也是很常用的几个命令之一，这个命令其实是两个命令合二为一的，git fetch 和 git merge。
+
+# 这里的这个bookmark是远程仓库的某个分支的意思
+$ git fetch [bookmark]
+
+
 ```
